@@ -1,3 +1,4 @@
+const {BlockChain, Transactions} =  require('./blockchain');
 let PLCoin = new BlockChain();
 PLCoin.createTransaction(new Transactions("address1", "address2", 100));
 PLCoin.createTransaction(new Transactions("address2", "address1", 100));
