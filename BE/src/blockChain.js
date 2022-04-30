@@ -1,10 +1,33 @@
 const SHA256 = require('crypto-js/sha256');
+const EC = require('elliptic').ec;
+var ec = new EC('secp256k1');
 
 class Transactions {
     constructor(fromAddress, toAddress, amount) {
         this.fromAddress = fromAddress;
         this.toAddress = toAddress;
         this.amount = amount;
+    }
+
+    calculateHash() {
+        return SHA256(this.fromAddress + this.toAddress + this.amount).toString();
+    }
+
+    signTransation(keyTransation) {
+        if(keyTransation.getPublic('hex') !== this.fromAddress)
+            return new Error('Key này không thể đăng nhập được');
+        const hashTransation = this.calculateHash();
+        const signTransation = keyTransation.sign(hashTransation, 'base64');
+        this.signature = signTransation.toDER('hex');
+    }
+
+    isValid() {
+        if(this.fromAddress === null) 
+            return true;
+        if(!this.signature || this.signature.length === 0)
+            return new Error('signture này không nằm trong transation');
+        const keyPublic = ec.keyFromPublic(this.fromAddress, 'hex');
+        return keyPublic.verify(this.calculateHash(), this.signature);
     }
 }
 class Block {
