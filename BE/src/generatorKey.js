@@ -4,3 +4,6 @@ var key = ec.genKeyPair();
 
 const keyPublic = key.getPublic('hex');
 const keyPrivate = key.getPrivate('hex');
+
+console.log('private key', keyPrivate);
+console.log('public key', keyPublic);

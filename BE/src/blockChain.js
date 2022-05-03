@@ -51,6 +51,15 @@ class Block {
 
         console.log("Mine", this.hash);
     }
+
+    hasValidTransations() {
+        for(const tx of this.transactions) {
+            if(!tx.isValid()){
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 class BlockChain {
@@ -74,17 +83,26 @@ class BlockChain {
     //     newBlock.mineBlock(this.levelDifficult);
     //     this.chain.push(newBlock);
     // }
-    miningRewardTransaction(miningRewardAddress) {
-        let block = new Block(Date.now(), this.peddingTransactions);
+    miningPendingTransaction(miningRewardAddress) {
+        let rewardTX = new Transactions(null, miningRewardAddress, this.miningReward);
+        this.peddingTransactions.push(rewardTX);
+
+        let block = new Block(Date.now(), this.peddingTransactions, this.getLastBlock().hash);
         block.mineBlock(this.levelDifficult);
-        console.log("Mine blog success");
+
+        console.log("Block miner success");
         this.chain.push(block);
         this.peddingTransactions = [
-            new Transactions(null, miningRewardAddress, this.miningReward)
         ]
     }
 
-    createTransaction(transaction) {
+    addTransaction(transaction) {
+        if(!transaction.fromAddress || !transaction.toAddress){
+            throw new Error('Transation phải có địa chỉ đi và địa chỉ đến.');
+        }
+        if(!transaction.isValid()) {
+            throw new Error('Không thể thêm transation vào block');
+        }
         this.peddingTransactions.push(transaction);
     }
 
@@ -110,6 +128,9 @@ class BlockChain {
             const currentBlock = this.chain[i];
             const previousBlock = this.chain[i-1];
 
+            if(!currentBlock.hasValidTransations()){
+                return false;
+            }
             if(currentBlock.hash !== currentBlock.calculateHash()){
                 return false;
             }
