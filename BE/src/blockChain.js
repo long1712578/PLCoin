@@ -142,6 +142,5 @@ class BlockChain {
         }
     }
 }
-
 module.exports.BlockChain = BlockChain;
 module.exports.Transactions = Transactions;

@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="title-cart-body">
+            <img class="card-img-top" style="height: 40px; width: 40px;" src="./assets/images/PLCoin.png" alt="Card image cap">
+            <h4 class="card-title">&nbsp; PL Coin</h4>
+        </div>
+      <p class="card-text" *ngIf="block?.transactions?.length === 0">Transaction: {{block.transactions}}</p>
+      <p class="card-text" *ngIf="block?.transactions?.length > 0">Transaction: {{block.transactions[0].toAddress}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-truncate">Hash: {{block.hash}}</li>
+      <li class="list-group-item text-truncate">pre hash: {{block.preHash}}</li>
+      <li class="list-group-item">Nonce: {{block.nonce}}</li>
+      <li class="list-group-item">Thoi gian: {{block.timestamp | customTime}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Xem chi tiết</a>
+    </div>
+  </div>

@@ -1,0 +1,9 @@
+<div class="container">
+ <h1>Block chain</h1>
+ <p>Chao mung website cua chung toi</p>
+ <div class="row">
+    <div class="col-sm-4" *ngFor="let item of blocks">
+        <app-block-view [block]="item"></app-block-view>
+    </div>
+</div>
+</div>
