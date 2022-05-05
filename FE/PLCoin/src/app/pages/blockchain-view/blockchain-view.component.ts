@@ -14,6 +14,7 @@ export class BlockchainViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.blockchainService.walletKeys.length)
     this.blocks = this.blockchainService.getBlocks();
     if(this.blocks.length > 0){
       this.selectedBlock = this.blocks[0];

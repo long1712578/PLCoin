@@ -11,6 +11,9 @@ import { SettingViewComponent } from './pages/setting-view/setting-view.componen
 import { FormsModule } from '@angular/forms';
 import { CreateTransactionViewComponent } from './pages/create-transaction-view/create-transaction-view.component';
 import { PenddingTransactionComponent } from './pages/pendding-transaction/pendding-transaction.component';
+import { CreateWalletViewComponent } from './pages/create-wallet-view/create-wallet-view.component';
+import { NzMessageModule } from 'ng-zorro-antd/message';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { PenddingTransactionComponent } from './pages/pendding-transaction/pendd
     TransactionTableComponent,
     SettingViewComponent,
     CreateTransactionViewComponent,
-    PenddingTransactionComponent
+    PenddingTransactionComponent,
+    CreateWalletViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NzMessageModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     CusTomTime

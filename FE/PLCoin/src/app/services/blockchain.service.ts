@@ -9,9 +9,14 @@ export class BlockchainService {
   public blockChain = new BlockChain();
   public walletKeys: any[] = [];
   constructor() { 
-    this.blockChain.levelDifficult = 1;
-    this.blockChain.miningPendingTransaction('my-wallet-address');
+    // this.blockChain.levelDifficult = 1;
+    // this.blockChain.miningPendingTransaction('my-wallet-address');
 
+    // this.generateWalletKeys();
+  }
+  createWallets(address: string): void{
+    this.blockChain.levelDifficult = 1;
+    this.blockChain.miningPendingTransaction(address);
     this.generateWalletKeys();
   }
   getBlocks(){
