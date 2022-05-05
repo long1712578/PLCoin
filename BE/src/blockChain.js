@@ -7,6 +7,7 @@ class Transactions {
         this.fromAddress = fromAddress;
         this.toAddress = toAddress;
         this.amount = amount;
+        this.timestamp = Date.now();
     }
 
     calculateHash() {
@@ -84,7 +85,7 @@ class BlockChain {
     //     this.chain.push(newBlock);
     // }
     miningPendingTransaction(miningRewardAddress) {
-        let rewardTX = new Transactions(null, miningRewardAddress, this.miningReward);
+        let rewardTX = new Transactions('System', miningRewardAddress, this.miningReward);
         this.peddingTransactions.push(rewardTX);
 
         let block = new Block(Date.now(), this.peddingTransactions, this.getLastBlock().hash);

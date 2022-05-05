@@ -1,0 +1,21 @@
+<div class="container">
+    <h3>Tạo transaction</h3>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label >Địa chỉ đi</label>
+        <input type="text" class="form-control" placeholder="..." [(ngModel)]="newTransaction.fromAddress" disabled>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label >Địa chỉ đến</label>
+        <input type="text" class="form-control"  placeholder="..." [(ngModel)]="newTransaction.toAddress">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label >Số lượng</label>
+        <input type="text" class="form-control"  placeholder="..." [(ngModel)]="newTransaction.amount">
+    </div>
+
+    <button type="button" class="btn btn-success" (click)="createTransaction()">Tạo</button>
+</div>

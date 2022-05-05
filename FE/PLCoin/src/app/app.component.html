@@ -1,6 +1,13 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">PLCoin</a>
+    <a class="navbar-brand" routerLink="/">PLCoin</a>
+    <div>
+      <button type="button" class="btn btn-outline-info" routerLink="/settings">Cài đặt</button>
+      &nbsp;
+      <button type="button" class="btn btn-outline-success" routerLink="/create-transaction">Tạo transaction</button>
+      &nbsp;
+      <button type="button" class="btn btn-outline-success" routerLink="/list-pendding-transaction">Danh sach transaction cho</button>
+    </div>
   </div>
 </nav>
 <router-outlet></router-outlet>

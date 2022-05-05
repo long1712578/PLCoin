@@ -7,6 +7,6 @@ const datePipe = new DatePipe('en-US');
 })
 export class CusTomTime implements PipeTransform {
   transform(myTimeStamp: string): string|null {
-    return datePipe.transform(myTimeStamp, 'EEEE, d MMMM YYYY');;
+    return datePipe.transform(myTimeStamp, 'EEEE, d MMMM YYYY');
   }
 }

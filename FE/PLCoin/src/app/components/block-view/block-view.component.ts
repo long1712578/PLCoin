@@ -11,7 +11,6 @@ export class BlockViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('block', this.block);
   }
 
 }
