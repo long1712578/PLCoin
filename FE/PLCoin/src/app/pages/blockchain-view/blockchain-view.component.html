@@ -1,6 +1,6 @@
 <div class="container">
  <h1>Block chain</h1>
- <p>Chao mung website cua chung toi</p>
+ <p>Chào mừng bạn đến giao dịch của chúng tôi</p>
     <div class="row">
         <div class="col-sm-4" style="cursor:text" *ngFor="let item of blocks">
             <app-block-view [block]="item" (click)="showTransaction(item)"></app-block-view>
@@ -10,6 +10,6 @@
 <br/>
 
 <div class="container">
-    <h1>Bảng thông kê</h1>
+    <h1>Bảng thống kê lịch sử giao dịch</h1>
     <app-transaction-table [transactions]="selectedBlock?.transactions"></app-transaction-table>
 </div>
