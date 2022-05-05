@@ -3,11 +3,11 @@ Demo tạo ra đồng coin
 Họ tên: Phạm Đình Long. MSSSV: 1712578.
 - Bài tập cá nhân về BlockChain.
 
-------- Link Github----------
+- ------ Link Github----------
 - https://github.com/long1712578/PLCoin
--------Link Youtube-----------
+- ------Link Youtube-----------
 - https://youtu.be/nAID0RrC0_4
---------Tài liệu tham khảo----
+- --------Tài liệu tham khảo----
 - https://viblo.asia/p/tu-tao-blockchain-trong-60-dong-code-javascript-1VgZvQN1KAw
 - https://viblo.asia/p/phan-1-tu-tao-ra-mot-cong-nghe-blockchain-cua-rieng-minh-4P856031ZY3
 - https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.myetherwallet.com%2Fwallet%2Fcreate%3Ffbclid%3DIwAR0J7EfhGQMOnbrVsIMA7o3oSTOLILIpmDpuTDz0BRq88L_IWT4ubiH2CjA&h=AT39dQN4x9AAkFElWQQWxQHQpmq3E-TULrcc3dPbIVlF0PG972wR-ulcnxp2QdiIqg0JRed_ybPb0obLXiroN0eXCoZmnAzZPq6XiEmdvA9VQxjtj6jN4-uFWFt3cwwMTlrj&__tn__=-UK-R&c[0]=AT1Xc1fk605ory_lbcef4U8kJWieI3I2EI9W9VN7BApYGc58XlRE_zdxHcr13UJYWyr9NFwEh0HA-be63DKDisA596BkbLr8A9qXddRbOiocNWDCerO_El7CIFK_HFQYtJ6nQW-OFl8gqoZ4kEe5GcYC1LzOo3ujq_prUphUusR0SxQm6YGoA7RTM1864dLkBuElmN20ejQG
